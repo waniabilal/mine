@@ -1,0 +1,3055 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>For Haziq — From Waniya ❤️</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #080607;
+    color: #f7eeee;
+    font-family: "Montserrat", sans-serif;
+    overflow-x: hidden;
+}
+
+body.locked {
+    overflow: hidden;
+}
+
+button,
+a {
+    font-family: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+
+/* =====================================================
+   VARIABLES
+===================================================== */
+
+:root {
+
+    --black: #080607;
+    --black2: #100a0c;
+
+    --burgundy: #531d2b;
+    --burgundy-light: #7d3345;
+
+    --gold: #c9a66b;
+    --gold-light: #ead09b;
+
+    --cream: #f7eeee;
+    --muted: #a89599;
+
+}
+
+
+/* =====================================================
+   INTRO
+===================================================== */
+
+.intro {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 10000;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #27131a 0%,
+            #080607 65%
+        );
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    transition:
+        opacity 1s ease,
+        visibility 1s ease;
+
+}
+
+.intro.hide {
+
+    opacity: 0;
+
+    visibility: hidden;
+
+}
+
+.intro-content {
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+.intro-symbol {
+
+    color: var(--gold);
+
+    font-size: 24px;
+
+    margin-bottom: 30px;
+
+    animation: rotateSymbol 8s linear infinite;
+
+}
+
+.intro-small {
+
+    color: #927d82;
+
+    font-size: 9px;
+
+    letter-spacing: 6px;
+
+    margin-bottom: 20px;
+
+}
+
+.intro h1 {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-weight: 400;
+
+    font-size: clamp(70px, 13vw, 150px);
+
+    line-height: .8;
+
+}
+
+.intro h1 span {
+
+    color: var(--gold);
+
+    font-style: italic;
+
+}
+
+.intro-sub {
+
+    color: var(--muted);
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 22px;
+
+    margin-top: 25px;
+
+}
+
+.enter-btn {
+
+    margin-top: 50px;
+
+    padding: 16px 28px;
+
+    background: transparent;
+
+    color: var(--cream);
+
+    border: 1px solid rgba(201,166,107,.6);
+
+    letter-spacing: 2px;
+
+    font-size: 9px;
+
+    transition: .4s;
+
+}
+
+.enter-btn span {
+
+    color: var(--gold);
+
+    margin-left: 15px;
+
+    font-size: 16px;
+
+}
+
+.enter-btn:hover {
+
+    background: var(--gold);
+
+    color: #100b0c;
+
+    transform: translateY(-4px);
+
+}
+
+
+
+/* =====================================================
+   PARTICLES
+===================================================== */
+
+#particles {
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    z-index: 3;
+
+    overflow: hidden;
+
+}
+
+.particle {
+
+    position: absolute;
+
+    width: 2px;
+
+    height: 2px;
+
+    background: var(--gold);
+
+    border-radius: 50%;
+
+    opacity: .4;
+
+    animation: particleFloat linear infinite;
+
+}
+/* Voice note */
+
+.voice-note {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 18px 22px;
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    background: #1b0c11;
+    border: 1px solid rgba(216, 180, 122, 0.45);
+    border-radius: 50px;
+
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.3);
+}
+
+.voice-icon {
+    width: 45px;
+    height: 45px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #3a1722;
+    font-size: 20px;
+}
+
+.voice-info {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.voice-info span {
+    color: #f0d49a;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 20px;
+}
+
+.voice-info small {
+    color: #9f9293;
+    font-size: 10px;
+}
+
+.voice-play {
+    width: 48px;
+    height: 48px;
+
+    border-radius: 50%;
+    border: 1px solid #d8b47a;
+
+    background: transparent;
+    color: #d8b47a;
+
+    cursor: pointer;
+    font-size: 16px;
+
+    transition: 0.3s;
+}
+
+.voice-play:hover {
+    background: #d8b47a;
+    color: #15090d;
+    transform: scale(1.08);
+}
+
+
+/* =====================================================
+   MUSIC
+===================================================== */
+
+.music-control {
+
+    position: fixed;
+
+    right: 30px;
+
+    bottom: 30px;
+
+    width: 50px;
+
+    height: 50px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(201,166,107,.5);
+
+    background: rgba(10,7,8,.7);
+
+    backdrop-filter: blur(15px);
+
+    color: var(--gold);
+
+    z-index: 500;
+
+    transition: .4s;
+
+}
+
+.music-control:hover {
+
+    transform: scale(1.1);
+
+}
+
+.music-control.playing {
+
+    box-shadow:
+        0 0 0 8px rgba(201,166,107,.06),
+        0 0 30px rgba(201,166,107,.2);
+
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+nav {
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    padding: 25px 5%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    z-index: 100;
+
+    mix-blend-mode: normal;
+
+    background-color:#060505;
+
+}
+
+.nav-logo {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 26px;
+
+}
+
+.nav-logo span {
+
+    color: var(--gold);
+
+}
+
+.nav-links {
+
+    display: flex;
+
+    gap: 35px;
+
+}
+
+.nav-links a {
+
+    color: #c9bdc0;
+
+    text-decoration: none;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    transition: .3s;
+
+}
+
+.nav-links a:hover {
+
+    color: var(--gold);
+
+}
+
+.nav-date {
+
+    color: #786c6f;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+}
+
+@media (max-width: 700px) {
+
+    .nav-links {
+
+        display: none;
+
+    }
+
+}
+
+/* ======================================
+gift 
+=========================================== */
+
+.gift-section {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.gift-text {
+    font:"Fira Sans",sans-serif;
+    font-size:18px;
+
+    cursor: pointer;
+    color:white;
+    transition: 0.3s;
+}
+
+.gift-text:hover {
+    transform: scale(1.08);
+}
+
+.gift-image {
+    display: none;
+    margin-top: 25px;
+    animation: popUp 0.6s ease;
+}
+
+.gift-image img {
+    width: 400px;
+    max-width: 90%;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    margin-left:15%;
+}
+
+@keyframes popUp {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+
+    min-height: 100vh;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+    text-align: center;
+
+}
+
+.hero-image {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            rgba(10,5,7,.4),
+            rgba(10,5,7,.9)
+        ),
+        url("hero.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    transform: scale(1.04);
+
+    animation: heroZoom 12s ease forwards;
+
+}
+
+.hero-gradient {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at center,
+            transparent 15%,
+            rgba(8,6,7,.7) 80%
+        );
+
+}
+
+.hero-content {
+
+    position: relative;
+
+    z-index: 5;
+
+    padding-top: 70px;
+
+}
+
+.hero-top {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    color: var(--gold);
+
+    font-size: 8px;
+
+    letter-spacing: 5px;
+
+}
+
+.hero-top span {
+
+    width: 35px;
+
+    height: 1px;
+
+    background: var(--gold);
+
+}
+
+.hero h1 {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(100px, 17vw, 220px);
+
+    font-weight: 300;
+
+    line-height: .75;
+
+    margin-top: 30px;
+
+    letter-spacing: -6px;
+
+}
+
+.hero-script {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(25px, 4vw, 45px);
+
+    color: var(--gold-light);
+
+    font-style: italic;
+
+    margin-top: 20px;
+
+}
+
+.hero-description {
+
+    color: #b9aaad;
+
+    font-size: 12px;
+
+    line-height: 2;
+
+    margin-top: 35px;
+
+}
+
+.hero-from {
+
+    margin-top: 35px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+
+}
+
+.hero-from span {
+
+    color: #7f7175;
+
+    font-size: 8px;
+
+    letter-spacing: 4px;
+
+}
+
+.hero-from strong {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 25px;
+
+    font-weight: 400;
+
+}
+
+.discover {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+    margin-top: 50px;
+
+    color: #a7979a;
+
+    text-decoration: none;
+
+    font-size: 8px;
+
+    letter-spacing: 3px;
+
+}
+
+.discover b {
+
+    color: var(--gold);
+
+    font-size: 20px;
+
+    animation: arrowMove 1.5s infinite;
+
+}
+
+
+/* =====================================================
+   OPENING
+===================================================== */
+
+.opening {
+
+    min-height: 80vh;
+
+    padding: 150px 12%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10%;
+
+    background: #0b0809;
+
+}
+
+.opening-number,
+.section-number {
+
+    font-family: "Cormorant Garamond", serif;
+
+    color: var(--gold);
+
+    font-size: 18px;
+
+}
+
+.opening-content {
+
+    max-width: 700px;
+
+}
+
+.eyebrow {
+
+    font-family: "Brush Script MT", "Segoe Script", cursive;
+    font-size: 8px;
+
+    color: var(--gold);
+
+    /* font-size: 8px; */
+
+    letter-spacing: 5px;
+
+    margin-bottom: 20px;
+
+}
+
+.opening h2,
+.section-title h2 {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-weight: 400;
+
+    font-size: clamp(50px, 7vw, 90px);
+
+    line-height: .9;
+
+}
+
+.opening h2 em,
+.section-title h2 em {
+
+    color: var(--gold);
+
+    font-style: italic;
+
+}
+
+.opening-content > p:not(.eyebrow) {
+
+    color: var(--muted);
+
+    font-size: 13px;
+
+    line-height: 2;
+
+    max-width: 600px;
+
+    margin-top: 35px;
+
+}
+
+.opening-content span {
+
+    color: var(--gold-light);
+
+    display: block;
+
+    margin-top: 15px;
+
+}
+
+
+
+
+/* =====================================================
+   SECRET
+===================================================== */
+
+.secret {
+
+    padding: 140px 7%;
+
+    background:
+        radial-gradient(
+            circle,
+            #241118,
+            #080607 70%
+        );
+
+    display: flex;
+
+    justify-content: center;
+
+}
+
+.secret-box {
+
+    max-width: 650px;
+
+    width: 100%;
+
+    text-align: center;
+
+    padding: 80px 40px;
+
+    border: 1px solid rgba(201,166,107,.18);
+
+    position: relative;
+
+}
+
+.lock {
+
+    color: var(--gold);
+
+    font-size: 35px;
+
+    margin-bottom: 30px;
+
+}
+
+.secret-box h2 {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-weight: 400;
+
+    font-size: 55px;
+
+    line-height: 1;
+
+}
+
+.secret-box h2 em {
+
+    color: var(--gold);
+
+}
+
+.secret-hint {
+
+    color: #847477;
+
+    font-size: 11px;
+
+    margin-top: 25px;
+
+}
+
+.secret-btn {
+
+    margin-top: 35px;
+
+    background: transparent;
+
+    color: #e6dadd;
+
+    border: 1px solid rgba(201,166,107,.5);
+
+    padding: 14px 25px;
+
+    font-size: 8px;
+
+    letter-spacing: 3px;
+
+}
+
+.secret-answer {
+
+    margin-top: 35px;
+
+    display: none;
+
+    animation: reveal .8s ease;
+
+}
+
+.secret-answer.show {
+
+    display: block;
+
+}
+
+.secret-answer span {
+
+    display: block;
+
+    color: #8f7e82;
+
+    font-size: 11px;
+
+}
+
+.secret-answer strong {
+
+    display: block;
+
+    color: var(--gold-light);
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 38px;
+
+    margin-top: 8px;
+
+}
+
+
+/* =====================================================
+   STORY
+===================================================== */
+
+.story,
+.memories,
+.letter {
+
+    padding: 150px 8%;
+
+    background: #0a0809;
+
+}
+
+.section-title {
+
+    margin: 20px 0 100px 8%;
+
+}
+
+.timeline {
+
+    max-width: 1000px;
+
+    margin: auto;
+
+    position: relative;
+
+}
+
+.timeline-line {
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 0;
+
+    bottom: 0;
+
+    width: 1px;
+
+    background: rgba(201,166,107,.25);
+
+}
+
+.timeline-item {
+
+    width: 50%;
+
+    position: relative;
+
+    padding: 30px 70px;
+
+    margin-bottom: 80px;
+
+}
+
+.timeline-item.left {
+
+    text-align: right;
+
+}
+
+.timeline-item.right {
+
+    margin-left: 50%;
+
+}
+
+.timeline-card span {
+
+    color: var(--gold);
+
+    font-size: 8px;
+
+    letter-spacing: 4px;
+
+}
+
+.timeline-card h3 {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-weight: 400;
+
+    font-size: 42px;
+
+    line-height: .95;
+
+    margin: 15px 0;
+
+}
+
+.timeline-card p {
+
+    color: var(--muted);
+
+    font-size: 12px;
+
+    line-height: 2;
+
+}
+
+.timeline-dot {
+
+    position: absolute;
+
+    top: 25px;
+
+    width: 40px;
+
+    height: 40px;
+
+    border: 1px solid var(--gold);
+
+    border-radius: 50%;
+
+    background: #0a0809;
+
+    color: var(--gold);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+.left .timeline-dot {
+
+    right: -20px;
+
+}
+
+.right .timeline-dot {
+
+    left: -20px;
+
+}
+
+@media (max-width: 700px) {
+
+    .timeline-line {
+
+        left: 15px;
+
+    }
+
+    .timeline-item,
+    .timeline-item.right {
+
+        width: 100%;
+
+        margin-left: 0;
+
+        padding: 30px 20px 30px 55px;
+
+        text-align: left;
+
+    }
+
+    .left .timeline-dot,
+    .right .timeline-dot {
+
+        left: -5px;
+
+        right: auto;
+
+    }
+
+}
+
+
+/* =====================================================
+   GALLERY
+===================================================== */
+
+.gallery {
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+
+}
+
+.photo {
+
+    height: 420px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background: #160d10;
+
+}
+
+.photo-large {
+
+    height: 600px;
+
+    grid-row: span 2;
+
+}
+
+.photo-wide {
+
+    grid-column: span 2;
+
+}
+
+.photo img {
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: 1s;
+
+    filter: saturate(.8);
+
+}
+
+.photo:hover img {
+
+    transform: scale(1.08);
+
+    filter: saturate(1);
+
+}
+
+.photo::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            transparent 40%,
+            rgba(0,0,0,.8)
+        );
+
+}
+
+.photo-caption {
+
+    position: absolute;
+
+    z-index: 2;
+
+    bottom: 25px;
+
+    left: 25px;
+
+}
+
+.photo-caption span {
+
+    color: var(--gold);
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 25px;
+
+}
+
+.photo-caption p {
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+
+    color: #e3d8da;
+
+    margin-top: 5px;
+
+}
+
+@media (max-width: 650px) {
+
+    .gallery {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .photo-large {
+
+        height: 450px;
+
+        grid-row: auto;
+
+    }
+
+    .photo-wide {
+
+        grid-column: auto;
+
+    }
+
+}
+
+
+/* =====================================================
+   LETTER
+===================================================== */
+
+.letter {
+
+    text-align: center;
+
+    min-height: 900px;
+
+}
+
+.letter-envelope {
+
+    width: 360px;
+
+    height: 230px;
+
+    margin: 80px auto 25px;
+
+    position: relative;
+
+    cursor: pointer;
+
+    transition: .5s;
+
+    perspective: 700px;
+
+}
+
+.letter-envelope:hover {
+
+    transform: translateY(-10px);
+
+}
+
+.envelope-paper {
+
+    position: absolute;
+
+    width: 90%;
+
+    height: 90%;
+
+    left: 5%;
+
+    top: 5%;
+
+    background: #efe2d5;
+
+    z-index: 1;
+
+}
+
+.paper-content {
+
+    color: #30181d;
+
+    padding: 40px 20px;
+
+}
+
+.paper-content span {
+
+    font-size: 7px;
+
+    letter-spacing: 4px;
+
+}
+
+.paper-content h3 {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 40px;
+
+    font-weight: 400;
+
+    margin: 10px 0;
+
+}
+
+.paper-content small {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 17px;
+
+}
+
+.envelope-front {
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 3;
+
+    background: #5a2633;
+
+    clip-path: polygon(
+        0 0,
+        50% 50%,
+        100% 0,
+        100% 100%,
+        0 100%
+    );
+
+}
+
+.envelope-flap {
+
+    position: absolute;
+
+    z-index: 4;
+
+    top: 0;
+
+    left: 0;
+
+    width: 0;
+    height: 0;
+
+    border-left: 180px solid transparent;
+    border-right: 180px solid transparent;
+
+    border-top: 120px solid #793747;
+
+    transform-origin: top;
+
+    transition: .8s;
+
+}
+
+.letter-envelope.open .envelope-flap {
+
+    transform: rotateX(180deg);
+
+    z-index: 0;
+
+}
+
+.click-text {
+
+    color: #76666a;
+
+    letter-spacing: 4px;
+
+    font-size: 8px;
+
+}
+
+
+/* =====================================================
+   LETTER MODAL
+===================================================== */
+
+.letter-modal {
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(4,3,3,.92);
+
+    backdrop-filter: blur(15px);
+
+    z-index: 900;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 20px;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition: .5s;
+
+}
+
+.letter-modal.show {
+
+    opacity: 1;
+
+    visibility: visible;
+
+}
+
+.letter-modal-inner {
+
+    width: 100%;
+
+    max-width: 700px;
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    position: relative;
+
+}
+
+.real-letter {
+
+    background: #efe3d7;
+
+    color: #30171d;
+
+    padding: 65px;
+
+    box-shadow:
+        0 30px 100px rgba(0,0,0,.7);
+
+}
+
+.close-letter {
+
+    position: absolute;
+
+    top: 10px;
+
+    right: 15px;
+
+    background: none;
+
+    border: none;
+
+    color: #32191e;
+
+    font-size: 30px;
+
+    z-index: 2;
+
+}
+
+.letter-date {
+
+    color: #97636d;
+
+    font-size: 8px;
+
+    letter-spacing: 4px;
+
+}
+
+.real-letter h2 {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 48px;
+
+    font-weight: 400;
+
+    margin: 30px 0;
+
+}
+
+.real-letter > p:not(.letter-date) {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 20px;
+
+    line-height: 1.7;
+
+    margin-bottom: 20px;
+
+}
+
+.letter-sign {
+
+    margin-top: 40px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 20px;
+
+    text-align: right;
+
+}
+
+.letter-sign strong {
+
+    display: block;
+
+    color: #7a3041;
+
+    font-size: 28px;
+
+    margin-top: 8px;
+
+}
+
+@media (max-width: 600px) {
+
+    .letter-envelope {
+
+        width: 290px;
+
+    }
+
+    .envelope-flap {
+
+        border-left-width: 145px;
+        border-right-width: 145px;
+        border-top-width: 100px;
+
+    }
+
+    .real-letter {
+
+        padding: 40px 25px;
+
+    }
+
+}
+
+/* =====================================================
+   FINAL
+===================================================== */
+
+.final {
+
+    min-height: 100vh;
+
+    position: relative;
+
+    overflow: hidden;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #35151f,
+            #090607 65%
+        );
+
+}
+
+.final-content {
+
+    position: relative;
+
+    z-index: 5;
+
+}
+
+.final-heart {
+
+    color: var(--gold);
+
+    font-size: 55px;
+
+    animation:
+        heartbeat 1.5s infinite;
+
+}
+
+.final h2 {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(70px, 11vw, 140px);
+
+    font-weight: 300;
+
+    line-height: .8;
+
+    margin-top: 20px;
+
+}
+
+.final h2 em {
+
+    color: var(--gold);
+
+}
+
+.final-message {
+
+    color: #9c898e;
+
+    font-size: 12px;
+
+    margin-top: 30px;
+
+}
+
+.final-names {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 25px;
+
+    margin-top: 40px;
+
+}
+
+.final-names span {
+
+    color: var(--gold);
+
+    padding: 0 12px;
+
+}
+
+.forever-btn {
+
+    margin-top: 40px;
+
+    background: transparent;
+
+    border: 1px solid rgba(201,166,107,.5);
+
+    color: #eee;
+
+    padding: 15px 25px;
+
+    letter-spacing: 3px;
+
+    font-size: 8px;
+
+    transition: .4s;
+
+}
+
+.forever-btn:hover {
+
+    background: var(--gold);
+
+    color: #171011;
+
+}
+
+
+/* =====================================================
+   HEART EXPLOSION
+===================================================== */
+
+.explosion-heart {
+
+    position: fixed;
+
+    left: 50%;
+
+    top: 50%;
+
+    z-index: 9999;
+
+    pointer-events: none;
+
+    color: var(--gold);
+
+    font-size: 20px;
+
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+
+    padding: 60px 20px;
+
+    text-align: center;
+
+    background: #060505;
+
+    border-top: 1px solid rgba(255,255,255,.05);
+
+}
+
+.footer-logo {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 35px;
+
+}
+
+.footer-logo span {
+
+    color: var(--gold);
+
+}
+
+footer p {
+
+    color: #85767a;
+
+    font-size: 10px;
+
+    margin: 15px 0;
+
+}
+
+footer small {
+
+    color: #55494c;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+
+}
+
+
+/* =====================================================
+   ANIMATIONS
+===================================================== */
+
+@keyframes heroZoom {
+
+    from {
+        transform: scale(1.04);
+    }
+
+    to {
+        transform: scale(1);
+    }
+
+}
+
+@keyframes rotateSymbol {
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+@keyframes particleFloat {
+
+    from {
+        transform:
+            translateY(0)
+            translateX(0);
+
+    }
+
+    to {
+        transform:
+            translateY(-100vh)
+            translateX(50px);
+
+    }
+
+}
+
+@keyframes arrowMove {
+
+    0%,100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(8px);
+    }
+
+}
+
+@keyframes heartbeat {
+
+    0%,100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+}
+
+@keyframes reveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+    </style>
+</head>
+
+<body>
+
+<!-- =====================================================
+     INTRO SCREEN
+===================================================== -->
+
+<div class="intro" id="intro">
+
+    <div class="intro-stars"></div>
+
+    <div class="intro-content">
+
+        <div class="intro-symbol">✦</div>
+
+        <p class="intro-small">
+            A PRIVATE LITTLE WORLD
+        </p>
+
+        <h1>
+            Happy Birthday
+        </h1>
+
+        <p class="intro-sub">
+            From Your Girl, with all my heart.
+        </p>
+
+        <button class="enter-btn" onclick="enterWebsite()">
+            Click Here
+            <span>→</span>
+        </button>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     BACKGROUND PARTICLES
+===================================================== -->
+
+<div id="particles"></div>
+
+
+<!-- =====================================================
+     MUSIC
+===================================================== -->
+
+<audio id="music" loop>
+    <source src="images/sound.mp3" type="audio/mpeg">
+</audio>
+
+<button class="music-control" id="musicControl">
+    <span class="music-icon">♫</span>
+</button>
+
+
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
+
+<nav id="navbar">
+
+    <div class="nav-logo">
+        <span>HR</span>
+    </div>
+
+    <div class="nav-links">
+
+        <a href="#home">Home</a>
+        <a href="#story">Story</a>
+        <a href="#memories">Memories</a>
+        <a href="#letter">Letter</a>
+
+    </div>
+
+    <div class="nav-date">
+        01 / 01
+    </div>
+
+</nav>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<main>
+
+<section class="hero" id="home">
+
+    <div class="hero-image"></div>
+
+    <div class="hero-gradient"></div>
+
+    <div class="hero-content">
+
+        <div class="hero-top">
+            <span></span>
+            <p>A BIRTHDAY STORY</p>
+            <span></span>
+        </div>
+
+        <!-- <h1>
+            Haziq
+        </h1> -->
+
+        <div class="hero-script">
+           Happiest birthday!
+        </div>
+
+        <p class="hero-description">
+
+            A year older
+            <br>
+            And still a sexy chick!
+
+        </p>
+
+        <div class="hero-from">
+
+            <span>with love</span>
+
+        </div>
+
+        <a href="#story" class="discover">
+            <span>DISCOVER OUR STORY</span>
+            <b>↓</b>
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     OPENING MESSAGE
+===================================================== -->
+
+<section class="opening">
+
+    <div class="opening-number">
+        01
+    </div>
+
+    <div class="opening-content">
+
+        <p class="eyebrow">
+            DEAR HAZIQ
+        </p>
+
+        <h2>
+            19 
+            <em>October</em>
+        </h2>
+
+        <p>
+
+            Not because it's your birthday.
+
+            But because you deserve to be reminded
+            of how much you mean to someone.
+
+        </p>
+
+        <p>
+
+            And that someone is me.
+
+            <span>—❤️</span>
+
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     SECRET QUESTION
+===================================================== -->
+
+<section class="secret">
+
+    <div class="secret-box">
+
+        <div class="lock">
+            ♡
+        </div>
+
+        <p class="eyebrow">
+            Happy Birthday to you!
+        </p>
+
+       <div class="gift-section">
+
+    <h3 onclick="showGift()" class="gift-text">
+        YOUR BIRTHDAY GIFT!🌸
+    </h3>
+
+    <div id="giftImage" class="gift-image">
+        <img src="images/download.jpg" alt="Birthday Gift">
+    </div>
+
+</div>
+       
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     STORY
+===================================================== -->
+
+<section class="story" id="story">
+
+    <div class="section-number">
+        02
+    </div>
+
+    <div class="section-title">
+
+        <p class="eyebrow">
+            OUR LITTLE UNIVERSE
+        </p>
+
+        <h2>
+            The story of
+            <em>us.</em>
+        </h2>
+
+    </div>
+
+
+    <div class="timeline">
+
+        <div class="timeline-line"></div>
+
+
+        <div class="timeline-item left">
+
+            <div class="timeline-card">
+
+                <span>THE BEGINNING 14-MAY</span>
+
+                <h3>
+                    Ahmm-Brother Sister!
+                </h3>
+
+                <p>
+                    “I remember my first day at the office. Back then, we were literally like brother and sister. In fact, I even told my family that Sir Haziq had made me his younger sister, and I saw him just like one of my brothers.”❤️
+                </p>
+
+            </div>
+
+            <div class="timeline-dot">
+                ✦
+            </div>
+
+        </div>
+
+
+        <div class="timeline-item right">
+
+            <div class="timeline-card">
+
+                <span>THE LITTLE THINGS ~ 20 May</span>
+
+                <h3>
+                   The Friendship-Era!
+                    
+                </h3>
+
+                <p>
+                    After that, we slowly became friends, and with every passing day, our bond started getting stronger. What started as a simple friendship gradually turned into a beautiful connection filled with comfort, laughter, and so many little memories. We started spending more time together, talking about random things, teasing each other, and just enjoying each other’s company.❤️
+                </p>
+
+            </div>
+
+            <div class="timeline-dot">
+                ♡
+            </div>
+
+        </div>
+
+
+        <div class="timeline-item left">
+
+            <div class="timeline-card">
+
+                <span>THE MEMORIES ~ 11 June</span>
+
+                <h3>
+                    Moments I
+                    wouldn't trade.
+                </h3>
+
+                <p>
+                    I still remember that it was raining outside, and you said, “Ms. Wania, from today onwards, 
+                    neither will you make any male friend, nor will I make any female best friend.”
+                   <br>
+                  
+                 <div class="section-number">
+        02
+    </div>
+
+    <p>
+And there are so many more memories from those days…🥹
+The days when we were conducting interviews, playing the truth game,
+ laughing over the smallest things, and of course, 
+the most important one — “Ms. Bushra, ye lein pen.”😂😭❤️  
+I don’t know if you remember all of them, but I definitely do.✨
+    </p>
+
+
+
+                </p>
+
+            </div>
+
+            <div class="timeline-dot">
+                ✧
+            </div>
+
+        </div>
+
+
+        <div class="timeline-item right">
+
+            <div class="timeline-card">
+
+                <span>RIGHT NOW TO FOREVER♾️</span>
+
+                <h3>
+                    And here we are.
+                </h3>
+
+                <p>
+                    Okay, now we’re in a completely different phase—the one
+                    I never even imagined we’d be in. Ahhh, I’m fucking loving this phase❤️✨
+                    <br>
+                    Still creating memories.
+                    Still choosing each other.
+                    Still writing our story.
+                </p>
+
+            </div>
+
+            <div class="timeline-dot">
+                ♥
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     MEMORIES
+===================================================== -->
+
+<section class="memories" id="memories">
+
+    <div class="section-number">
+        03
+    </div>
+
+    <div class="section-title">
+
+        <p class="eyebrow">
+            OUR FAVORITE CHAPTERS
+        </p>
+
+        <h2>
+            Memories
+            <em>we keep.</em>
+        </h2>
+
+    </div>
+
+
+    <div class="gallery">
+
+        <div class="photo photo-large">
+
+            <img src="images/memory3.jpeg" alt="Our memory">
+
+            <div class="photo-caption">
+                <span>01</span>
+                <p>A moment worth remembering.</p>
+            </div>
+
+        </div>
+
+
+        <div class="photo">
+
+            <img src="images/memory-1.png" alt="Our memory">
+
+            <div class="photo-caption">
+                <span>02</span>
+                <p>Just us.</p>
+            </div>
+
+        </div>
+
+
+        <div class="photo">
+
+            <img src="images/memory2.png" alt="Our memory">
+
+            <div class="photo-caption">
+                <span>03</span>
+                <p>One of my favorites.</p>
+            </div>
+
+        </div>
+
+
+        <div class="photo photo-wide">
+
+            <img src="images/memory4.png" alt="Our memory">
+
+            <div class="photo-caption">
+                <span>04</span>
+                <p>You.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     LOVE LETTER
+===================================================== -->
+
+<section class="letter" id="letter">
+
+    <div class="section-number">
+        04
+    </div>
+
+    <div class="section-title">
+
+        <p class="eyebrow">
+            WORDS FROM MY HEART
+        </p>
+
+        <h2>
+          Ohhh! I wrote you
+            <em>something.</em>
+        </h2>
+
+    </div>
+
+
+    <div class="letter-envelope" onclick="openLetter()">
+
+        <div class="envelope-flap"></div>
+
+        <div class="envelope-paper">
+
+            <div class="paper-content">
+
+                <span>
+                    TO HAZIQ
+                </span>
+
+                <h3>
+                    Open me.
+                </h3>
+
+                <small>
+                    With love, Huzurum
+                </small>
+
+            </div>
+
+        </div>
+
+        <div class="envelope-front"></div>
+
+    </div>
+
+    <p class="click-text">
+        CLICK THE LETTER
+    </p>
+
+</section>
+
+
+<!-- =====================================================
+     LETTER MODAL
+===================================================== -->
+
+<div class="letter-modal" id="letterModal">
+
+    <div class="letter-modal-inner">
+
+        <button
+            class="close-letter"
+            onclick="closeLetter()"
+        >
+            ×
+        </button>
+
+        <div class="real-letter">
+
+            <p class="letter-date">
+                FOR HAZIQ • WITH LOVE
+            </p>
+            <br> <br>
+             <p> <small>Okay, before you start reading this letter!
+            Turn the music off first, then play the voice note below.
+            And only after that, start reading this letter!🤍 </small></p>
+
+
+             <div class="voice-note">
+
+    <div class="voice-icon">🎙️</div>
+
+    <div class="voice-info">
+        <span>🥹❤️</span>
+        <small>~My 11:11 PERSON</small>
+    </div>
+
+    <button id="voicePlayBtn" class="voice-play">
+        ▶
+    </button>
+
+    <audio id="voiceNote">
+        <source src="images/voice-note.mp3" type="audio/mpeg">
+    </audio>
+
+</div> 
+
+  <p>
+   "✨حاضر ہوں میں، تمہاری ہی ہوں میں" 
+
+
+  </p>
+
+       <p>  <small>
+            “The song in the voice note above carries
+             some feelings that are hard to put into words!”
+          </small> </p>
+
+
+           <br> <br>
+            <h2>
+               My favorite person,
+            </h2>
+            
+            <p>
+            Happy birthday Haziq SHB. My Chatgpt, My Classic Man, My Safe Place, My Best friend!🧸
+            
+            </p>
+
+            <p>
+                الجزء الأجمل بحياتي أنت
+                <br>
+                The most beautiful part of my life is you🌸🌙
+            </p>
+
+            
+            
+
+            <p>
+                <br>
+
+               A little effort from my side. <br>
+               Me hamesha apky sath rhoungi. Ap pe nazrain rkhoungi taky ap kisi pe nazrain nah rkh sakain!
+                <br><br> 
+                
+                <strong> Khair bht tareefain ho gain apki, Ab zara mjhpe aty hain! </strong>
+                <br> 
+
+                <br>
+
+                I know effort choti hai bas me chahti ke jb ap ye website dekhain to apko pata lagy
+                kitni axhi hun me MashaAllah, Alhamdullilah!
+
+                Or zara kam danta krein mjhy. Kisi din gussa ho gai naah phir awain tunning kar dungi apki!
+                <br>
+                Mere se zara dar ke rahain. Ayi smjh? 
+                <br>Main itni achi hoon ke kabhi kabhi mujhe khud samajh nahi aata ke itni achi kaise hoon :)<br>
+            Umm Okay, Ab qadar krein meri dekhain kitni shareef, susheel, pyari, masoom larki
+            apko dhoondny se bhi ni milni. <br>
+             Ahmm Wese ap dhoondain gy bhi nai kyunky ik he glti insaan bar bar ni kar skta.
+                <br> <br>
+
+
+                KHAIR!
+                <br>
+                Mazak kar rhi bas me chahti apko meri yeh choti se effort yaad rahy OR ap thora
+                sa khush ho jain. 
+                <br>Me srf chahti ap apni birthday pe itna khush hon jitna ik khusra 
+                apny bachy ke paida hony pe khush hoga🙈
+            </p>
+
+           
+            <p>
+            Okay! You don't know Haziq how much you mean to me. You are not just a special person, you are my safe place, my favorite notification!  I hope this year brings you endless happiness, success, peace, and all the things your heart wishes for. May you always have reasons to smile, and may I always be there to make you smile… or annoy you, because obviously that is also my responsibility. <br>
+            May this new chapter of your life be filled with beautiful moments, unforgettable memories, and lots and lots of happiness. And yes, I hope I get to be a part of many of those memories.❤️
+            <br><strong>Happy Birthday, Mohtaram!🎀</strong>
+            <br>And now you're 26… which means you're officially getting older, but unfortunately for you, you still have to deal with me😚
+            </p> 
+
+
+              
+          <p>
+            Haziq!
+            <br>
+        I know sometimes I end up hurting you, but I never mean to.  
+    <br>And sometimes I say something, 
+    and you understand it completely differently from what I actually meant. <br>
+    Anyway, that's your fault because I always say things perfectly😌 <br>
+    And one more thing… <br>
+
+    <strong>You are My favorite headache! 🦋</strong>
+
+          </p>
+
+           
+
+            <p>
+             <br> <br>
+            I'm blessed to have you in my life!
+            <br>Ap bas larkiyan thori dekhain
+            to ap or axhy ho skty 
+            <br>Zara dantain kam to or bhi zyada ho skty
+            <br>Tyar hoke office nah jain to oyy hoyy tabahi ho jain gy
+            <br>I think itni kafi hai tareef apky lie❤️
+            <br><br>Ni yawr ap bht axhy hainn itna dantny ke bad bhi ap axhy hain lkin phir bhi me zyada axhi hun:) <br>Pata Apse mera sab match hotaaa height ko
+            chor ke. Me kabhi apki life me hun ya nah hun I wish Apko sab kuch zyada zyada mily (Larkiyan chor ke). Khoob taraki krein or apny maa baap ka nam roshan krein jaise mein krti Ahmmm. Ap itny axhy hain ke apki tareef me shabd he ni!
+           <p>
+
+
+       <p>
+        Pata hai mjhy ap pe poora bharosa hai khud se bhi zyada bharosa hai mjhy ap pe Lakin Phir bhi shak me poora karoungi 
+        <br> <strong>Ladies hun naaw🙈</strong>
+       </p>
+
+       <p> <br>
+       "🦋🌙رُوحِ مَن"
+        <br>
+        Hamesha khush rahain. Hansty muskuraty rahain. Sada suhagan rahain. meri shubkamnain apky sath hainnn. Khoob taraki krein. Hamesha chamakty dhamakty lashkary marty rahain. Allah Pak apko dheer sari khushiyan dein. Lakin agar apki khushi <strong>4</strong> shadiyon mein hai to rehn dein ap aese he sae hain! Wese mjhy pata hai ap 4 shadiyan nahi krein gy srf cheerty hain lakin me chir jati hun! 
+       </p>
+
+       <p>Me chahti hum hamesha sath rahain hansty, larty jhagarty, aik dsre ko manaty, aik dsre ki bat man ke, aik dsre ko priority de ke, aik dsre ko smjha kar or aik dsre pe haq jitaty huy! hum me chahy lakh laraiyan hi kyun nah ho but har larai ka solution nikal lein. I want us to always stay together, keep growing together, and create countless beautiful memories. Because memories are forever🩷</p>
+
+        <p> 
+         <br> Arz kiya hai
+            <br>محترم 
+            <br>محبت میں انائیں کیسی؟
+            <br>کبھی میں صحیح آپ غلط ، کبھی آپ غلط میں صحیح۔
+        </p>
+
+        <p>
+            Agar ap is quote ko apni life me hamesha yaad rkhain gy to dekhnaa kaise hum dono khush rahain gy InshaAllah!
+
+           
+        </p>
+        <br>
+          <p style="text-align: center; font-size:large;">♡</p>
+         
+          <p> 
+        !أنتَ نور عيني وسلام قلبي
+        <br>
+        —You're the light of my eyes, <br>
+         & the peace of my heart🫀
+         </p>
+
+        <p> <br>
+            لا شيء أجمل منك، ولا شيء يُسعدني أكثر من وجودي معك
+            <br>
+            Nothing is more beautiful than you, and nothing makes me happier than being with you🥹
+        </p>
+
+        <p> <br>
+           ♡أنت حبيب روحي
+        <br>
+        You are the love of my soul.🤍            
+        </p>
+
+         <p> <br>
+            عيني ستظل معجبة بك إلى الأبد
+        <br>
+        My eyes will adore you forever✨
+        </p>
+         
+        <p>  <br>
+        
+            الله يجمعنا معًا في دنيا والآخرة
+        <br>
+        May Allah keep us together, fi dunya wal akhirah🌸
+        
+        </p>
+        
+        <p> <br>
+         معك، دائمًا وأبدًا
+        <br>
+        —With you, forever and always♾️
+
+        </p>
+
+              <p> <br>
+              🌷أنا أحبك
+            </p>
+
+        <br>
+            <p>Wese jitni mene apki tareefain kar dein hain apko chahiye din, raat, sbha, dophair, shaam time se <strong>2-2</strong> nafal parhain shukrany ke. Ky me apki zindagi me ayee warna ghoom rhy hoty kisi chapri ke sath! Ya koi milti apko <strong>Sana shapatri</strong> ya <strong>Saimaa Easy Load Wali</strong>  jo har dsre din apse balance mangwati khikhikhi. Mazak kar rhi hun naseeb me likhi hui museebatein mil ke he rehti hain chahy insaan kitna he door kyun nah bhaag jayeee (Ni me apko musibat ni keh rhi). Ye meri tareef thi. <strong>Huzurum,</strong> beshak ap har waqt isi koshish me hoty hain ke mein koi glti karoun or ap mjhy lapatain lakin phir bhi me chahti ap ye zindagi mery sath guzarain obv jitni lvl tea me deti naah apko end hai qsmy. Jis din ap larein naah mera BP low ho jata. Apky sath pangy karny ka alag he maza hai OR <strong> most importantly</strong> ap koi kam krny ko bolain  to uspe nahi karna mera faraz hai (Bad me chahy han kar dun) lakin sb se phly nahi he ayegaaaa <strong>(Ladies hun naaw)</strong> Or naah bhala kya apni choti choti khusriyon ko bolain door rahain warna me in saaliyon ki gudiya bana deni.  Kabhi koi mshkil aye to me hamesha apky sath hun mjhse opinion le lena mazeed fielding set ho jayegi apki. Ap khush rhain lakin srf mery sath baqi kisi ko agar ap dekh ke hansain to Allah kar ke uska bhai apko dekh le Ameeennnnnn. 
+            <br>HAPPY 26th BIRTHDAY TO MY PARTNER! My Labubu, My love, My Person, My Babe, Mine Moon, My Soul, Mine Swan, Mwaah Mwaah, A million extra wishes for youuuuu. You are so special🦢
+            <br>Just wanna remind you that
+            <br>I  loveeeeeeee youuuuuuuu sooooooo muchhhhhhhhhhhh🩷🌸 
+
+            <br>No one can replace you.
+            <br>اور میرے لیے کوئی بھی شخص تم جیسا نہیں ہو سکتا 
+            <br> <br>
+            I may not tell you everyday that you mean the world to me but you do. The day you stepped into my life you changed it into something so beautiful and meaningful. I may not be the first woman in your life but I want to be the last woman you everloved. I may not be the first woman to make you feel loved but I want to be the only one to make you feel loved to the core
+            _♥
+            <br>I choose you. And I’ll choose you, over and over and over. Without pause, without a doubt, in a heartbeat. I’ll keep choosing you forever. I love you more than our fights, arguments, silly talks and mood swings. I want to see you achieve everything you've ever told me, even if I am not there🫶🏻. 
+
+            <br>Whether I’m in your life or not, please always take really good care of yourself, okieee? 🥺🤍 OR apna promise bhi hamesha yaad rkhnaaa haii ke ap ainda cigarettes nahi piyein gy agar apny kbhi cigarettes ko mun lagayaaa to Allah kar ke koi masjid ke bahir se apki joota chupai ki rasam kar jaye AMEEENNNN SUMAMEEENNNN!
+
+            <br>Btw me emotions express krny me shyd itni axhi ni hun but jahan tk smjh aye mene kar deyaa kyunky apki birthday thi naah. Ab mery ik ikloty, pyary, wafadaar, or mukhlis bandy ka birthday tha to itna toh me kar skti thi naah🌷
+
+            <br>Dekhain apse koi larki aese muhabbat ni kar payegi jaise me krti hun! Ab isko srf bat he rehny dena check krny ni lag jana ke koi lrki aese muhabbat karti hai ke ni me tangain tor deni apki.
+
+            <br> <br> Just consider this a <strong>vintage letter</strong>, okayyy?✉️
+
+             <br> <br>
+            Lastly!
+            <br>🧸زه تا سره مینه کوم
+            
+        </p>
+
+
+            <div class="letter-sign">
+
+                Forever rooting for you,
+
+                <strong>
+                ~Azizam!
+                </strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     FINAL SURPRISE
+===================================================== -->
+
+<section class="final" id="final">
+
+    <div class="final-stars"></div>
+
+    <div class="final-content">
+
+        <div class="final-heart">
+            ♥
+        </div>
+
+        <p class="eyebrow">
+            IF YOU EVER FORGET
+        </p>
+
+        <h2>
+            Haziq,
+            <br>
+            you are
+            <em>precious.</em>
+        </h2>
+
+        <p class="final-message">
+            More than this little website could ever explain.
+        </p>
+
+        <div class="final-names">
+            Huzurum
+            <span>×</span>
+            Azizam
+        </div>
+
+        <button class="forever-btn" >
+            FOREVER & ALWAYS ♡
+        </button>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <div class="footer-logo">
+         <span>H</span> 
+    </div>
+
+    <p>
+        Made with love, especially for Haziq.
+    </p>
+
+    <small>
+        From Yours Azizam.
+    </small>
+
+</footer>
+
+
+<script>
+    /* =====================================================
+   WEBSITE ENTRY
+===================================================== */
+
+function enterWebsite() {
+
+    const intro = document.getElementById("intro");
+
+    intro.classList.add("hide");
+
+    document.body.classList.remove("locked");
+
+    setTimeout(() => {
+        createParticles();
+    }, 500);
+
+}
+
+
+/* =====================================================
+   PARTICLES
+===================================================== */
+
+function createParticles() {
+
+    const container =
+        document.getElementById("particles");
+
+    for (let i = 0; i < 70; i++) {
+
+        const particle =
+            document.createElement("div");
+
+        particle.className = "particle";
+
+        particle.style.left =
+            Math.random() * 100 + "%";
+
+        particle.style.top =
+            Math.random() * 100 + "%";
+
+        particle.style.opacity =
+            Math.random() * 0.7;
+
+        particle.style.animationDuration =
+            5 + Math.random() * 10 + "s";
+
+        particle.style.animationDelay =
+            Math.random() * 5 + "s";
+
+        container.appendChild(particle);
+
+    }
+
+}
+
+
+/* =====================================================
+   MUSIC
+===================================================== */
+
+const music =
+    document.getElementById("music");
+
+const musicControl =
+    document.getElementById("musicControl");
+
+let playing = false;
+
+musicControl.addEventListener(
+    "click",
+    () => {
+
+        if (!playing) {
+
+            music.play()
+                .then(() => {
+
+                    playing = true;
+
+                    musicControl.classList.add(
+                        "playing"
+                    );
+
+                })
+                .catch(() => {
+
+                    alert(
+                        "Add your music as 'music.mp3' inside the website folder."
+                    );
+
+                });
+
+        } else {
+
+            music.pause();
+
+            playing = false;
+
+            musicControl.classList.remove(
+                "playing"
+            );
+
+        }
+
+    }
+);
+
+
+/* =====================================================
+   LETTER
+===================================================== */
+
+function openLetter() {
+
+    const envelope =
+        document.querySelector(".letter-envelope");
+
+    const modal =
+        document.getElementById("letterModal");
+
+    envelope.classList.add("open");
+
+    setTimeout(() => {
+
+        modal.classList.add("show");
+
+        document.body.classList.add("locked");
+
+    }, 500);
+
+}
+
+
+function closeLetter() {
+
+    const modal =
+        document.getElementById("letterModal");
+
+    modal.classList.remove("show");
+
+    document.body.classList.remove("locked");
+
+}
+
+
+/* =====================================================
+   CLOSE LETTER ON BACKDROP
+===================================================== */
+
+document
+    .getElementById("letterModal")
+    .addEventListener(
+        "click",
+        function(event) {
+
+            if (event.target === this) {
+
+                closeLetter();
+
+            }
+
+        }
+    );
+
+// =========================================================
+// Voice Note
+//  ========================================================
+
+    const voiceNote = document.getElementById("voiceNote");
+const voicePlayBtn = document.getElementById("voicePlayBtn");
+
+voicePlayBtn.addEventListener("click", () => {
+
+    if (voiceNote.paused) {
+
+        voiceNote.play();
+
+        voicePlayBtn.innerHTML = "❚❚";
+
+    } else {
+
+        voiceNote.pause();
+
+        voicePlayBtn.innerHTML = "▶";
+
+    }
+
+});
+
+voiceNote.addEventListener("ended", () => {
+
+    voicePlayBtn.innerHTML = "▶";
+
+});
+
+
+
+
+/* =====================================================
+   CUSTOM CURSOR
+===================================================== */
+
+const cursorDot =
+    document.querySelector(".cursor-dot");
+
+const cursorRing =
+    document.querySelector(".cursor-ring");
+
+
+document.addEventListener(
+    "mousemove",
+    (event) => {
+
+        cursorDot.style.left =
+            event.clientX + "px";
+
+        cursorDot.style.top =
+            event.clientY + "px";
+
+
+        cursorRing.animate(
+            {
+                left: event.clientX - 15 + "px",
+                top: event.clientY - 15 + "px"
+            },
+            {
+                duration: 300,
+                fill: "forwards"
+            }
+        );
+
+    }
+);
+
+
+/* =====================================================
+   CURSOR HOVER
+===================================================== */
+
+const hoverElements =
+    document.querySelectorAll(
+        "a, button, .letter-envelope, .gift-box"
+    );
+
+
+hoverElements.forEach(element => {
+
+    element.addEventListener(
+        "mouseenter",
+        () => {
+
+            cursorRing.style.width = "45px";
+            cursorRing.style.height = "45px";
+
+        }
+    );
+
+
+    element.addEventListener(
+        "mouseleave",
+        () => {
+
+            cursorRing.style.width = "30px";
+            cursorRing.style.height = "30px";
+
+        }
+    );
+
+});
+
+
+/* =====================================================
+   ESCAPE KEY
+===================================================== */
+
+document.addEventListener(
+    "keydown",
+    event => {
+
+        if (event.key === "Escape") {
+
+            closeLetter();
+
+        }
+
+    }
+);
+
+
+// gift 
+
+
+function showGift() {
+    const image = document.getElementById("giftImage");
+
+    if (image.style.display === "block") {
+        image.style.display = "none";
+    } else {
+        image.style.display = "block";
+    }
+}
+
+
+/* =====================================================
+   REVEAL ANIMATION ON SCROLL
+===================================================== */
+
+const observer =
+    new IntersectionObserver(
+        entries => {
+
+            entries.forEach(entry => {
+
+                if (entry.isIntersecting) {
+
+                    entry.target.style.opacity = "1";
+
+                    entry.target.style.transform =
+                        "translateY(0)";
+
+                }
+
+            });
+
+        },
+        {
+            threshold: .15
+        }
+    );
+
+
+document
+    .querySelectorAll(
+        ".timeline-item, .photo, .opening-content"
+    )
+    .forEach(element => {
+
+        element.style.opacity = "0";
+
+        element.style.transform =
+            "translateY(40px)";
+
+        element.style.transition =
+            "opacity 1s ease, transform 1s ease";
+
+        observer.observe(element);
+
+    });
+</script>
+
+</body>
+</html>
